@@ -1,0 +1,18 @@
+// test code
+#include <cppunit/extensions/HelperMacros.h>
+#include "triangle.h"
+
+class TriangleTests: public CppUnit::TestFixture {
+public:
+	CPPUNIT_TEST_SUITE(TriangleTests);
+	CPPUNIT_TEST(testInequalitySatisfied);
+	CPPUNIT_TEST_SUITE_END();
+
+	void testInequalitySatisfied() {
+		CPPUNIT_ASSERT(isTriangle(4, 5, 6));
+	}
+  private:
+	triangle *t;
+};
+
+
